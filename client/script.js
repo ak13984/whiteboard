@@ -24,7 +24,7 @@ let isDrawing = false;
 let isEraserdown = false;
 let isStickyMoving = false;
 const magnify = document.querySelector(".incsize");
-var socket = io.connect('http://localhost:3000');
+var socket = io.connect('https://akwhiteboard.herokuapp.com/');
 
 board.addEventListener("mousedown", function (e) {
     ctx.beginPath();
