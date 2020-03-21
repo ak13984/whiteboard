@@ -20,7 +20,7 @@ socket.on('undo',function(obj){
 });
 
 app.use(express.static('client'));
-
-server.listen(3000, function () {
-    console.log('listening on *:3000');
+const port=process.env.PORT;
+server.listen(port, function () {
+    console.log(`listening on *:${port}`);
 });

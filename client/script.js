@@ -199,13 +199,13 @@ undo.addEventListener("click", function () {
             ctx.lineWidth=locArray[i].width;
             ctx.beginPath();
             ctx.moveTo(locArray[i].x, locArray[i].y);
-            socket.emit('undo',locArray[i]);
+            socket.emit('undo');
         } else if (locArray[i].flag == "moving") {
             ctx.strokeStyle = locArray[i].currcolor;
             ctx.lineWidth = locArray[i].width;
             ctx.lineTo(locArray[i].x, locArray[i].y);
             ctx.stroke();
-            socket.emit('undo',locArray[i]);
+            socket.emit('undo');
         }
     }
 });
